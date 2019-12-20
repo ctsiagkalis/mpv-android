@@ -349,7 +349,8 @@ internal class MPVView(context: Context, attrs: AttributeSet) : SurfaceView(cont
     var aid: Int by TrackDelegate()
 
     // Commands
-
+    fun subseekFW() = MPVLib.command(arrayOf("sub_seek","1"))
+    fun subseekBW() = MPVLib.command(arrayOf("sub_seek","-1"))
     fun cyclePause() = MPVLib.command(arrayOf("cycle", "pause"))
     fun cycleAudio() = MPVLib.command(arrayOf("cycle", "audio"))
     fun cycleSub() = MPVLib.command(arrayOf("cycle", "sub"))

@@ -432,6 +432,9 @@ class MPVActivity : Activity(), MPVLib.EventObserver, TouchGesturesObserver {
             KeyEvent.KEYCODE_MEDIA_PAUSE -> player.paused = true
             KeyEvent.KEYCODE_MEDIA_PLAY -> player.paused = false
 
+            KeyEvent.KEYCODE_VOLUME_DOWN -> player.subseekBW()
+            KeyEvent.KEYCODE_VOLUME_UP -> player.subseekFW()
+//            KeyEvent.KEYCODE_BACK -> player.cyclePause()
             else -> unhandeled++
         }
 
